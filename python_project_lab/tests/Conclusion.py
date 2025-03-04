@@ -1,3 +1,0 @@
-print("Threading is typically useful for I/O-bound tasks and might not show significant speedups for CPU-bound tasks due to the Global Interpreter Lock (GIL) in Python.")
-print("Multiprocessing can provide better speedup for CPU-bound tasks, as each process runs in its own Python interpreter and bypasses the GIL.")
-print("Speedup and efficiency are not always linear, especially with increasing numbers of threads/processes, due to overhead and resource contention")
