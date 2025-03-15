@@ -1,5 +1,3 @@
-# Lab1-Part2
-This is Lab1-Part2/ Readme File.
-Welcome to Bakchodi !
+# This repo is for purpose of DSAI3202 Labs
 
-CHANGE!
+Welcome to Assassination!
