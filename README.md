@@ -1,5 +1,4 @@
-# Lab1-Part2
-This is Lab1-Part2/ Readme File.
-Welcome to Bakchodi !
+# Lab1
+This is Lab1 Readme File.
+Welcome to Assassination!
 
-CHANGE!
