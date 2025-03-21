@@ -105,3 +105,27 @@ Run this command to use 4 processes:
 ```bash
 mpirun -n 4 python3 parallel_genetic_algorithm.py
 ```
+
+# 7 Runnin on multiple machines
+
+## **How to Run the Parallel Code**
+Run this command to use 4 processes for each machine:
+```bash
+ mpirun -hostfile machines.txt -n 8 python parallel_genetic_algorithm.py
+```
+
+
+## Output
+Best Solution: [16, 3, 29, 13, 0, 11, 24, 7, 5, 21, 12, 18, 2, 15, 26, 23, 19, 4, 8, 6, 14, 22, 25, 17, 31, 27, 1, 20, 30, 28, 9, 10]
+Total Distance: -1000000.0
+Execution Time: 2.26 seconds
+
+# 8 remarks
+
+# command used
+mpirun -hostfile machines.txt -n 8 python extended_genetic_algorithm.py 
+
+# output
+Best Solution: [98, 0, 39, 72, 90, 1, 61, 34, 13, 59, 43, 36, 96, 21, 44, 82, 2, 91, 15, 29, 57, 77, 95, 8, 87, 73, 27, 38, 6, 7, 60, 71, 74, 75, 25, 93, 17, 45, 32, 20, 68, 18, 81, 69, 9, 56, 37, 67, 31, 58, 53, 3, 55, 46, 80, 47, 52, 19, 24, 12, 79, 26, 11, 5, 40, 85, 99, 94, 16, 49, 88, 84, 97, 51, 78, 92, 4, 28, 62, 42, 89, 14, 48, 10, 76, 64, 66, 22, 50, 63, 35, 70, 83, 86, 65, 33, 54, 41, 23, 30]
+Total Distance: -1000000.0
+Execution Time: 5.57 seconds
