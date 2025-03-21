@@ -14,7 +14,7 @@ start_time = time.time()
 
 # Load distance matrix (only once on rank 0, then broadcast)
 if rank == 0:
-    distance_matrix = pd.read_csv('Assignment1/Assignment1_Part2/data/city_distances_cleaned.csv').to_numpy()
+    distance_matrix = pd.read_csv('/home/student/DSAI3202-Winter25-Sec-3/Assignment1/Assignment1_Part2/data/city_distances_cleaned.csv').to_numpy()
 else:
     distance_matrix = None
 

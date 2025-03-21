@@ -5,7 +5,7 @@ from genetic_algorithm import calculate_fitness, select_in_tournament, order_cro
 
 
 # Load the distance matrix
-distance_matrix = pd.read_csv('city_distances_cleaned.csv').to_numpy()
+distance_matrix = pd.read_csv('Assignment1/Assignment1_Part2/data/city_distances_cleaned.csv').to_numpy()
 
 # Parameters
 num_nodes = distance_matrix.shape[0]
