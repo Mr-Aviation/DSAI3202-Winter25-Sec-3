@@ -1,0 +1,39 @@
+2025-04-12 03:05:30,832 - Dispatched Explorer 0
+2025-04-12 03:05:30,833 - Dispatched Explorer 1
+2025-04-12 03:05:30,834 - Dispatched Explorer 2
+2025-04-12 03:05:30,835 - Dispatched Explorer 3
+2025-04-12 03:05:30,841 - 
+=== Explorers' Performance Summary ===
+2025-04-12 03:05:30,842 - Explorer 0: Time = 0.00s | Moves = 367 | Backtracks = 0
+2025-04-12 03:05:30,842 - Explorer 1: Time = 0.00s | Moves = 378 | Backtracks = 0
+2025-04-12 03:05:30,842 - Explorer 2: Time = 0.00s | Moves = 365 | Backtracks = 0
+2025-04-12 03:05:30,842 - Explorer 3: Time = 0.00s | Moves = 144 | Backtracks = 0
+2025-04-12 03:05:30,842 - 
+Best Route Found by Explorer 3! (Time = 0.00s)
+
+2025-04-12 03:05:33,964 - Dispatched Explorer 0
+2025-04-12 03:05:33,965 - Dispatched Explorer 1
+2025-04-12 03:05:33,967 - Dispatched Explorer 2
+2025-04-12 03:05:33,968 - Dispatched Explorer 3
+2025-04-12 03:05:34,981 - 
+=== Explorers' Performance Summary ===
+2025-04-12 03:05:34,982 - Explorer 0: Time = 0.00s | Moves = 245 | Backtracks = 0
+2025-04-12 03:05:34,982 - Explorer 1: Time = 0.00s | Moves = 179 | Backtracks = 0
+2025-04-12 03:05:34,982 - Explorer 2: Time = 0.00s | Moves = 96 | Backtracks = 0
+2025-04-12 03:05:34,982 - Explorer 3: Time = 0.00s | Moves = 178 | Backtracks = 0
+2025-04-12 03:05:34,982 - 
+Best Route Found by Explorer 2! (Time = 0.00s)
+
+2025-04-12 03:08:27,340 - Dispatched Explorer 0
+2025-04-12 03:08:27,341 - Dispatched Explorer 1
+2025-04-12 03:08:27,343 - Dispatched Explorer 2
+2025-04-12 03:08:27,344 - Dispatched Explorer 3
+2025-04-12 03:08:28,350 - 
+=== Explorers' Performance Summary ===
+2025-04-12 03:08:28,350 - Explorer 0: Time = 0.00s | Moves = 480 | Backtracks = 0
+2025-04-12 03:08:28,350 - Explorer 1: Time = 0.00s | Moves = 337 | Backtracks = 0
+2025-04-12 03:08:28,350 - Explorer 2: Time = 0.00s | Moves = 132 | Backtracks = 0
+2025-04-12 03:08:28,350 - Explorer 3: Time = 0.00s | Moves = 301 | Backtracks = 0
+2025-04-12 03:08:28,350 - 
+Best Route Found by Explorer 1! (Time = 0.00s)
+
