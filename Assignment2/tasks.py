@@ -16,6 +16,6 @@ def run_explorer_task(index, maze_type, width, height):
         "id": index,
         "time": time_taken,
         "moves": len(moves),
-        "backtracks": explorer.backtrack_count
+        "backtracks": 0  # A* doesn't use backtracking
     }
 

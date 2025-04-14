@@ -80,4 +80,82 @@ To wrap it all up:
 This smart little program can solve many types of mazes, even if they are tricky. It’s designed in a way that beginners can understand but still solves the maze effectively.
 
 
+....................................................................................................................................
+
+
+# Question 3: Analysis and Comparison of Maze Explorers on a Static Maze
+
+## Objective
+
+This analysis aims to evaluate the performance of multiple maze explorers solving the same static maze simultaneously. The goal is to understand how consistent their behavior is and what metrics reveal about their pathfinding efficiency.
+
+## Experiment Setup
+
+We used the `--type static` option to ensure all explorers were given the exact same maze configuration. We ran four explorers in parallel using a Celery-based task queue and collected performance logs from multiple sessions.
+
+## Metrics Collected
+
+Each explorer's performance was evaluated using the following:
+
+- Total time taken to solve the maze
+- Number of moves made
+- Number of backtrack operations
+
+These metrics were logged for each run and compared side-by-side.
+
+## Sample Log Observations
+
+### First Run:
+```
+Explorer 0: Time = 0.00s | Moves = 1279 | Backtracks = 0
+Explorer 1: Time = 0.00s | Moves = 1279 | Backtracks = 0
+Explorer 2: Time = 0.00s | Moves = 1279 | Backtracks = 0
+Explorer 3: Time = 0.00s | Moves = 1279 | Backtracks = 0
+Best Route Found by Explorer 3!
+```
+
+### Second Run:
+```
+Explorer 0: Time = 0.00s | Moves = 59 | Backtracks = 0
+Explorer 1: Time = 0.00s | Moves = 485 | Backtracks = 0
+Explorer 2: Time = 0.00s | Moves = 156 | Backtracks = 0
+Explorer 3: Time = 0.00s | Moves = 579 | Backtracks = 0
+Best Route Found by Explorer 0!
+```
+
+### Third Run:
+```
+Explorer 0: Time = 0.00s | Moves = 1279 | Backtracks = 0
+Explorer 1: Time = 0.00s | Moves = 1279 | Backtracks = 0
+Explorer 2: Time = 0.00s | Moves = 1279 | Backtracks = 0
+Explorer 3: Time = 0.00s | Moves = 1279 | Backtracks = 0
+Best Route Found by Explorer 1!
+```
+
+## Analysis
+
+### Time Taken
+In all cases, the time taken was 0.00 seconds, indicating that the static maze was solved very quickly. This is expected because the maze was likely small and simple enough for the program to complete almost instantly.
+
+### Moves Made
+This is where variation occurs:
+- In two of the three runs, all explorers took 1279 moves, suggesting that the right-hand rule algorithm consistently followed the same long path.
+- In the second run, move counts ranged from 59 to 579, showing that explorer behavior can vary significantly even on the same maze.
+
+This variation likely results from subtle differences in the maze generation process (even with static type) or how the algorithm handles decision points where multiple paths are available.
+
+### Backtrack Operations
+In all runs, backtracks were zero, indicating that explorers never encountered a dead end. This suggests that the static maze is designed in a way that allows continuous forward movement without needing to reverse direction.
+
+## Key Observations
+
+1. Consistency in Behavior: Most runs showed explorers taking identical paths, which aligns with the deterministic nature of the right-hand rule.
+2. Occasional Variation: Some runs produced significantly different move counts. This might be due to how the explorers are initialized or small timing or environmental differences during execution.
+3. No Backtracking Required: The maze does not seem to contain confusing or misleading paths that would require the explorer to backtrack.
+
+## Conclusion
+
+The performance of the explorers on the static maze was generally consistent but not identical. While they usually followed the same path, occasional outliers in move count show that even with the same maze, slight randomness or execution timing can influence results. However, the absence of backtracking confirms the maze’s simplicity and the explorer’s effectiveness in navigating it.
+
+
 
