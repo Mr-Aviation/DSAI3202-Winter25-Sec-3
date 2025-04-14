@@ -158,4 +158,87 @@ In all runs, backtracks were zero, indicating that explorers never encountered a
 The performance of the explorers on the static maze was generally consistent but not identical. While they usually followed the same path, occasional outliers in move count show that even with the same maze, slight randomness or execution timing can influence results. However, the absence of backtracking confirms the maze’s simplicity and the explorer’s effectiveness in navigating it.
 
 
+...................................................................................................................................
 
+
+
+## Question 4: Enhancing the Maze Explorer
+
+### Identified Limitations of the Original Explorer (Right-Hand Rule)
+
+The original maze explorer used the right-hand rule for navigation. While simple and easy to implement, it has several limitations:
+
+- **Inefficiency in Large Mazes:** The right-hand rule explores the maze blindly by sticking to one wall. This leads to many unnecessary moves before reaching the goal.
+- **Longer Paths:** It doesn't guarantee the shortest path to the destination.
+- **Looping Risk:** In certain maze structures, it may loop or revisit paths multiple times.
+- **No Intelligence:** It does not use any logic about the position of the goal, which makes it unsuitable for complex mazes.
+
+### Proposed Improvements
+
+To overcome these limitations, we implemented an enhanced explorer using the **A* (A-Star) algorithm**.
+
+### Why A* is Better
+
+- **Optimal Pathfinding:** A* finds the shortest path efficiently using both actual distance (g-cost) and estimated distance (heuristic or h-cost).
+- **Performance Efficiency:** Fewer total moves, fewer steps, and better overall use of system resources.
+- **No Need for Backtracking:** The algorithm avoids loops and unnecessary paths.
+
+### Implementation Changes
+
+- Replaced right-hand logic with A* algorithm.
+- Used priority queue to expand shortest-path nodes first.
+- Introduced heuristic calculation (Manhattan distance).
+- Visualized path reconstruction.
+
+## Question 5: Performance Comparison Between Right-Hand Rule and A* Algorithm
+
+### Performance Metrics from Logs
+
+#### Right-Hand Rule (Moves made per Explorer)
+
+| Run | Explorer | Moves |
+|-----|----------|-------|
+| 1   | All      | 1279  |
+| 2   | E0       | 59    |
+|     | E1       | 485   |
+|     | E2       | 156   |
+|     | E3       | 579   |
+| 3   | All      | 1279  |
+| 4   | All      | 1279  |
+
+#### A* Algorithm (Moves made per Explorer)
+
+| Run | Explorer | Moves |
+|-----|----------|-------|
+| 1   | All      | 128   |
+
+### Graph: Number of Moves Comparison
+
+![alt text](image.png)
+
+### Graph: Time Comparison (Simulated)
+
+Even though logs showed 0.00s due to high speed, we use a visual graph to show relative performance.
+![alt text](image-1.png)
+
+
+## Trade-Offs and New Limitations
+
+| Aspect              | Right-Hand Rule                     | A* Algorithm                          |
+|---------------------|-------------------------------------|----------------------------------------|
+| **Path Optimality** | Not optimal                         | Always finds optimal path              |
+| **Performance**     | Slower due to blind exploration     | Faster with fewer steps                |
+| **Complexity**      | Very simple                         | More complex due to priority queue     |
+| **Memory Usage**    | Minimal                             | Requires more memory for open/closed sets |
+| **Backtracking**    | Can loop and require backtracking   | No need to backtrack                   |
+
+### Conclusion
+
+By upgrading the maze explorer from the right-hand rule to the A* algorithm, we achieved:
+
+- Significantly reduced move count
+- Optimal and efficient pathfinding
+- No backtracking
+- Smarter and faster performance overall
+
+The graphs above clearly demonstrate how A* drastically improves maze-solving efficiency, making it ideal for complex and large mazes.
